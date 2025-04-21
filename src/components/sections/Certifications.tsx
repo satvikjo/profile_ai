@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { BadgeCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Certifications: React.FC = () => {
@@ -34,48 +34,79 @@ const Certifications: React.FC = () => {
   ];
 
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [showArrows, setShowArrows] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const container = scrollRef.current;
-      const { scrollLeft, scrollWidth, clientWidth } = container;
-      const scrollAmount = direction === 'left' ? -clientWidth : clientWidth;
-      const newPosition = scrollLeft + scrollAmount;
-
-      if (direction === 'right' && scrollLeft + clientWidth >= scrollWidth) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
-      } else if (direction === 'left' && scrollLeft <= 0) {
-        container.scrollTo({ left: scrollWidth, behavior: 'smooth' });
-      } else {
-        container.scrollTo({ left: newPosition, behavior: 'smooth' });
-      }
+      const scrollAmount = direction === 'left' ? -container.clientWidth : container.clientWidth;
+      
+      container.scrollBy({
+        left: scrollAmount * (isMobile ? 0.8 : 1),
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
-    <section id="certifications" className="py-5 px-6 bg-gray-100">
+    <section id="certifications" className="py-0 px-4">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-gray-800 mb-2">Certifications</h2>
+        <h2 className="text-3xl sm:text-4xl font-xl text-gray-800 mb-2">Certifications</h2>
         <div className="w-28 h-1 mx-auto mt-4 bg-blue-600 rounded-full animate-pulse" />
       </div>
-      <div className="relative max-w-6xl mx-auto">
-        <button onClick={() => scroll('left')} className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow">
-          <ChevronLeft className="text-blue-600 w-5 h-5" />
-        </button>
-        <div ref={scrollRef} className="overflow-x-auto scrollbar-hide [&::-webkit-scrollbar]:hidden">
-          <div className="flex gap-6 w-max px-6">
+      
+      <div 
+        className="relative max-w-6xl mx-auto"
+        onMouseEnter={() => setShowArrows(true)}
+        onMouseLeave={() => setShowArrows(false)}
+      >
+        {/* Navigation Arrows */}
+        {(showArrows || isMobile) && (
+          <>
+            <button 
+              onClick={() => scroll('left')} 
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition"
+            >
+              <ChevronLeft className="text-blue-600 w-5 h-5" />
+            </button>
+            <button 
+              onClick={() => scroll('right')} 
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition"
+            >
+              <ChevronRight className="text-blue-600 w-5 h-5" />
+            </button>
+          </>
+        )}
+
+        {/* Certifications Carousel */}
+        <div 
+          ref={scrollRef} 
+          className="overflow-x-auto scrollbar-hide [&::-webkit-scrollbar]:hidden snap-x snap-mandatory"
+        >
+          <div className="flex gap-4 sm:gap-6 w-max px-4 sm:px-6">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="min-w-[360px] max-w-[360px] bg-white rounded-2xl border border-gray-200 p-6 shadow hover:shadow-md transition duration-300"
+                className="min-w-[85vw] sm:min-w-[360px] max-w-[85vw] sm:max-w-[360px] bg-white rounded-2xl border border-gray-200 p-6 shadow hover:shadow-md transition duration-300 snap-center"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
                     <BadgeCheck className="text-purple-600 w-5 h-5" />
                   </div>
-                  <h3 className="ml-4 text-lg font-semibold text-gray-800">{cert.title}</h3>
+                  <h3 className="ml-4 text-lg font-xl text-gray-800">{cert.title}</h3>
                 </div>
-                <ul className="list-disc list-inside text-base text-gray-700 space-y-1">
+                <ul className="list-disc list-inside text-sm sm:text-base text-gray-700 space-y-1">
                   {cert.details.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
@@ -84,9 +115,6 @@ const Certifications: React.FC = () => {
             ))}
           </div>
         </div>
-        <button onClick={() => scroll('right')} className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow">
-          <ChevronRight className="text-blue-600 w-5 h-5" />
-        </button>
       </div>
     </section>
   );
