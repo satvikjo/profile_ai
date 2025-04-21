@@ -31,9 +31,9 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-14">
           <div className="flex items-center">
-            <span className="text-xl font-bold text-gray-800">Satvik Jonnalagadda</span>
+            <span className="text-xl font-semi-bold text-gray-800">Satvik Jonnalagadda</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-gray-600 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm font-medium transition-colors duration-200"
               >
                 {item}
               </button>
