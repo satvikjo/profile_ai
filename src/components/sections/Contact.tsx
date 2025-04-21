@@ -23,13 +23,13 @@ const Contact: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4">
-      <h2 className="text-3xl font-bold text-gray-800 mb-8">Get in Touch</h2>
+      <h2 className="text-3xl font-xl text-gray-800 mb-8">Get in Touch</h2>
       
       <div className="grid md:grid-cols-2 gap-8">
         {/* Contact Information */}
         <div className="space-y-6">
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+            <h3 className="text-xl font-xl text-gray-800 mb-6">Contact Information</h3>
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="text-blue-600 w-5 h-5 mr-3" />
