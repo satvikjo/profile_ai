@@ -27,11 +27,11 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <section id="education" className="py-0 bg-white px-4">
+    <section id="education" className="py-0 px-4">
       {/* Section Header */}
       <div className="text-center mb-10">
         <div className="inline-flex items-center justify-center mb-4">
-          <h2 className="text-4xl font-bold text-gray-800">Education</h2>
+          <h2 className="text-4xl font-xl text-gray-800">Education</h2>
         </div>
         <div className="w-28 h-1 mx-auto bg-blue-600 rounded-full animate-pulse" />
       </div>
@@ -54,7 +54,7 @@ const Education: React.FC = () => {
                 alt={`${edu.school} logo`}
                 className="w-12 h-12 object-contain"
               />
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 leading-tight">
+              <h3 className="text-lg md:text-xl font-xl text-gray-800 leading-tight">
                 {edu.school}
               </h3>
             </div>
