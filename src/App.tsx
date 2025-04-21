@@ -5,6 +5,7 @@ import Experience from './components/sections/Experience';
 import Projects from './components/sections/Projects';
 import Certifications from './components/sections/Certifications';
 import Contact from './components/sections/Contact';
+import Footer from './components/sections/Footer';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Contact />
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
