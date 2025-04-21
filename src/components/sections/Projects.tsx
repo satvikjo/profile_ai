@@ -126,9 +126,9 @@ const Projects = () => {
       : projectsByDomain[activeTab] || [];
 
   return (
-    <section id="projects" className="py-5 bg-gray-50 px-4">
+    <section id="projects" className="py-0 px-4">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-gray-800 inline-flex items-center">
+        <h2 className="text-4xl font-xl text-gray-800 inline-flex items-center">
           Projects
         </h2>
         <div className="w-28 h-1 mx-auto mt-4 bg-blue-600 rounded-full animate-pulse" />
@@ -169,7 +169,7 @@ const Projects = () => {
                 className="w-full h-48 object-cover rounded-xl mb-4"
               />
             )}
-            <h4 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h4>
+            <h4 className="text-xl font-xl text-gray-800 mb-2">{project.title}</h4>
             <p className="text-gray-600 text-sm mb-3">{project.description}</p>
             <p className="text-sm text-gray-500 italic mb-4"> {project.tech}</p>
             <div className="flex items-center gap-4 mt-4">
