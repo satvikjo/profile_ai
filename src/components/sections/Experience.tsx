@@ -50,11 +50,11 @@ const experience = [
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-5 bg-white px-4">
+    <section id="experience" className="py-0 px-4">
       {/* Section Header */}
       <div className="text-center mb-10">
         <div className="inline-flex items-center justify-center mb-4">
-          <h2 className="text-4xl font-bold text-gray-800">Experience</h2>
+          <h2 className="text-4xl font-xl text-gray-800">Experience</h2>
         </div>
         <div className="w-28 h-1 mx-auto bg-blue-600 rounded-full animate-pulse" />
       </div>
@@ -84,7 +84,7 @@ const Experience: React.FC = () => {
 
               {/* Card */}
               <div className={`bg-white border border-gray-200 shadow-lg rounded-xl p-6 w-full md:w-2/3 z-10 ${index % 2 === 0 ? 'order-1 mr-auto' : 'order-2 ml-auto'}`}>
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-800">{exp.role}</h3>
+                <h3 className="text-xl md:text-2xl font-xl text-gray-800">{exp.role}</h3>
                 <p className="text-blue-700 text-base font-medium">{exp.company}</p>
                 <p className="text-sm text-gray-500 mt-1">{exp.period}</p>
                 <ul className="list-disc pl-5 mt-4 space-y-2 text-gray-700 text-sm md:text-base">
