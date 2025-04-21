@@ -8,30 +8,30 @@ import Contact from './components/sections/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-100 via-purple-100 to-blue-100">
       <Navbar />
       <main>
         <section id="about" className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
           < About />
         </section>
         
-        <section id="education" className="py-20 bg-white">
+        <section id="education" className="py-10">
           <Education />
         </section>
         
-        <section id="experience" className="py-20 bg-gray-50">
+        <section id="experience" className="py-10">
           <Experience />
         </section>
 
-        <section id="projects" className="py-20 bg-white">
+        <section id="projects" className="py-10">
           <Projects />
         </section>
         
-        <section id="certifications" className="py-20 bg-gray-50">
+        <section id="certifications" className="py-10">
           <Certifications />
         </section>
         
-        <section id="contact" className="py-20 bg-gray-50">
+        <section id="contact" className="py-10">
           <Contact />
         </section>
       </main>
