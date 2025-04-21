@@ -55,7 +55,7 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4 pt-20 overflow-hidden">
+    <div className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100 px-4 pt-20 overflow-hidden">
       {init && (
         <Particles
           className="absolute inset-0 z-0"
@@ -77,12 +77,12 @@ const About = () => {
               links: { 
                 enable: true, 
                 distance: 120, 
-                color: '#3b82f6', 
+                color: '#60a5fa', 
                 opacity: 0.4, 
                 width: 1 
               },
               shape: { type: 'circle' },
-              opacity: { value: 0.6 },
+              opacity: { value: 0.8 },
             }
           }}
         />
@@ -97,21 +97,22 @@ const About = () => {
         >
           <motion.div variants={itemVariants}>
             <motion.h1
-              className="text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-2"
+              className="text-3xl md:text-4xl font-lg text-gray-800 leading-tight mb-2"
             >
-              Hi, I'm <span className="text-blue-600">Satvik</span>
+              Hi there!  <span className="text-blue-600"> I'm Satvik</span>
             </motion.h1>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="h-12">
-            <div className="text-2xl text-blue-600 font-medium">
+          <motion.div variants={itemVariants} className="h-12 mb-2">
+            <div className="text-lg text-blue-600 font-medium">
               <Typewriter
                 options={{
                   strings: [
+                    'Software Engineer',
+                    'AI/ML Engineer',
+                    'Full Stack Developer',
+                    'Cloud Solutions Architect',
                     'Data Scientist',
-                    'Machine Learning Engineer',
-                    'AI Researcher',
-                    'Deep Learning Specialist'
                   ],
                   autoStart: true,
                   loop: true,
@@ -124,12 +125,13 @@ const About = () => {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} >
             <motion.p
-              className="text-xl text-gray-600 leading-relaxed"
+              className="text-base text-gray-600 leading-relaxed"
             >
-              Passionate about AI and Machine Learning, I build intelligent systems that solve real-world problems.
-              Currently pursuing my Master's in Computer Science at University at Buffalo.
+              Master's student in Computer Science at University at Buffalo specializing in AI/ML. 
+              Currently seeking <span className="font-semibold text-blue-700"> full-time opportunities </span> 
+              in Software Development, AI Research, or Cloud-based AI Solutions.
             </motion.p>
           </motion.div>
 
