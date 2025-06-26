@@ -25,7 +25,7 @@ const Certifications: React.FC = () => {
       ]
     },
     {
-      title: "AWS Certified Machine Learning – Specialty",
+      title: "AWS Certified Machine Learning Engineer",
       details: [
         "Demonstrated expertise in building, training, tuning, and deploying machine learning models on AWS.",
         "Validated knowledge of key AWS services including SageMaker, S3, IAM, and Lambda for implementing ML workflows."
