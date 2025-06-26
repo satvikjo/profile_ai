@@ -11,7 +11,7 @@ const Education: React.FC = () => {
       logo: UBLogo,
       degree: "Master of Science in Computer Science",
       specialization: "Specialization in AI & Machine Learning",
-      year: "Jan 2024 – Present",
+      year: "Jan 2024 – May 2025",
       gpa: "GPA: 3.70 / 4.0",
       align: "left"
     },
