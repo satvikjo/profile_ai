@@ -11,7 +11,6 @@ import editorImg from '/src/assets/projects/editor.png';
 import iplImg from '/src/assets/projects/ipl.png';
 import doodleVideo from '/src/assets/videos/doodle.mp4';
 import houseVideo from '/src/assets/videos/house.mp4';
-import drowsinessVideo from '/src/assets/videos/drowsiness.mp4';
 import cloudmartPdf from '/src/assets/docs/CloudMart.pdf';
 
 
@@ -76,11 +75,6 @@ const projectsByDomain: Record<string, Project[]> = {
       github: "https://github.com/satvikjo/Drowsiness-Detection",
       demo: null,
       image: drowsinessImg
-      embed: (
-        <a href={drowsinessVideo} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline inline-flex items-center">
-          <Link className="w-4 h-4 mr-1" /> Watch Demo
-        </a>
-      )
     }
   ],
   'Full Stack & DevOps': [
