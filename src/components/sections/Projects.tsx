@@ -11,6 +11,7 @@ import editorImg from '/src/assets/projects/editor.png';
 import iplImg from '/src/assets/projects/ipl.png';
 import doodleVideo from '/src/assets/videos/doodle.mp4';
 import houseVideo from '/src/assets/videos/house.mp4';
+import drowsinessVideo from '/src/assets/videos/drowsiness.mp4';
 import cloudmartPdf from '/src/assets/docs/CloudMart.pdf';
 
 
