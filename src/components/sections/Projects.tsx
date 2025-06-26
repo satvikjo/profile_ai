@@ -67,14 +67,19 @@ const projectsByDomain: Record<string, Project[]> = {
       )
     },
     {
-      title: "Drowsiness Detection using Computer Vision",
+      title: "Drowsiness Detection System Using Hybrid Deep Learning and Facial Features",
       description:
         "Real-time drowsiness detection using facial landmarks and eye aspect ratio tracking to prevent driver fatigue. Supports alarm triggering and frame-wise analysis.",
       tech:
         "Tech Stack: Python, OpenCV, Dlib, PyTorch, Deep Learning, Haar cascades, GUI (Tkinter)",
-      github: "https://github.com/satvikjo",
+      github: "https://github.com/satvikjo/Drowsiness-Detection",
       demo: null,
       image: drowsinessImg
+      embed: (
+        <a href={drowsinessVideo} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline inline-flex items-center">
+          <Link className="w-4 h-4 mr-1" /> Watch Demo
+        </a>
+      )
     }
   ],
   'Full Stack & DevOps': [
