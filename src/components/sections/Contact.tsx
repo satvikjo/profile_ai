@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <MapPin className="text-blue-600 w-5 h-5 mr-3" />
-                <span className="text-gray-600">Buffalo, NY</span>
+                <span className="text-gray-600">United States</span>
               </div>
             </div>
           </div>
