@@ -16,7 +16,7 @@ const Education: React.FC = () => {
       align: "left"
     },
     {
-      school: "Acharya Nagarjuna University, Guntur, India",
+      school: "Acharya Nagarjuna University, Guntur, Andhra Pradesh, India",
       logo: ANULogo,
       degree: "Bachelor of Technology in Computer Science & Engineering",
       specialization: "Specialization in Machine Learning",
