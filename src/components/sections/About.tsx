@@ -167,7 +167,7 @@ const About = () => {
             variants={itemVariants}
           >
             <motion.a
-              href="https://drive.google.com/uc?export=download&id=1sqdelAV68Pl1SZJxS03qhmGx1WtGcBch"
+              href="https://drive.google.com/file/d/1tgzP1SzAWyEdzNq1nxd-3hMbiZCyDXj3/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-2 bg-blue-600 text-white text-lg font-medium rounded-md hover:bg-blue-700 transition-colors"
