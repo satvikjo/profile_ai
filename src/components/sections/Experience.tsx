@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import UBLogo from '/src/assets/logos/ub.png';
-import FinstackLogo from '/src/assets/logos/finstack.png';
+import FinstackLogo from '/src/assets/logos/finstack.jpeg';
 import ExposysLogo from '/src/assets/logos/exposys.png';
 
 const experience = [
