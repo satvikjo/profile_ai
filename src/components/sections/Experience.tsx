@@ -2,36 +2,34 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import UBLogo from '/src/assets/logos/ub.png';
-import ShiashLogo from '/src/assets/logos/shiash.png';
+import FinstackLogo from '/src/assets/logos/finstack.png';
 import ExposysLogo from '/src/assets/logos/exposys.png';
 
 const experience = [
   {
-    role: "Student Assistant",
+    role: "Graduate Research Assistant",
     company: "University at Buffalo, Buffalo, NY",
     logo: UBLogo,
-    period: "Aug 2024 – Present",
+    period: "Jan 2024 – Present",
     responsibilities: [
-      "Manage task delegation and coordination for over 60 students across 10+ sub-stations at the Union Station, ensuring operational consistency and productivity.",
-      "Lead efforts in streamlining shift scheduling and role assignment, improving daily efficiency and reducing service delays.",
-      "Serve as a liaison between students and management, promoting clarity, accountability, and high service standards.",
-      "Resolved operational conflicts and implemented real-time tracking methods for enhanced visibility.",
-      "Contributed to digital process enhancements using Excel macros and scheduling software."
-    ]
+    "Architected and deployed a GenAI-powered RAG pipeline using Amazon Bedrock, AWS Lambda, and OpenSearch to enable semantic search over academic research, boosting retrieval accuracy by 95%.",
+    "Implemented security controls with AWS IAM and API Gateway to protect sensitive data, ensuring compliance with university research data handling policies.",
+    "Optimized LLM performance with prompt engineering and fine-tuning techniques, reducing hallucinations and improving response relevance by 30%.",
+    "Collaborated with faculty researchers to translate domain-specific requirements into scalable cloud-native solutions, accelerating research workflows."
+  ]
   },
   {
-    role: "Full Stack Developer Intern",
-    company: "Shiash Info Solutions Pvt. Ltd., India",
-    logo: ShiashLogo,
-    period: "Jul 2023 – Oct 2023",
+    role: "Associate Software Engineer",
+    company: "Finstack Solutions Pvt. Ltd., Hyderabad, India",
+    logo: FinstackLogo,
+    period: "Jun 2022 – Dec 2023",
     responsibilities: [
-      "Architected and optimized full-stack applications with efficient backend API design, frontend integration, and responsive UI implementations.",
-      "Automated CI/CD pipelines and deployed scalable microservices on cloud platforms, reducing release cycles by 40%.",
-      "Enhanced platform reliability by 25% through comprehensive testing, error handling, and debugging strategies.",
-      "Collaborated in an Agile environment, contributing to sprint planning, code reviews, and continuous improvement practices.",
-      "Integrated RESTful APIs with security-focused endpoints to enable seamless cloud communication.",
-      "Implemented logging and monitoring tools to track system health, improving incident response time."
-    ]
+    "Automated CI/CD workflows using GitHub Actions for Dev, QA, and Prod environments, reducing manual deployment efforts by 95% and achieving a 99.9% release success rate.",
+    "Implemented Infrastructure as Code (IaC) using AWS CDK to provision and manage serverless resources such as Lambda, S3, and IAM, ensuring 100% configuration consistency.",
+    "Developed and deployed secure, serverless APIs with AWS Lambda and API Gateway, cutting operational costs by 30% and reducing latency by 40%.",
+    "Conducted architecture reviews and optimized system design for high availability, scalability, and compliance in enterprise environments.",
+    "Integrated monitoring and alerting solutions using CloudWatch and Splunk, reducing mean time to issue detection by 60%."
+  ]
   },
   {
     role: "Web Developer Intern",
